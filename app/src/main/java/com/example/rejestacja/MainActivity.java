@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String input_email=email.getText().toString().trim();
                 String input_haslo=haslo.getText().toString().trim();
-                String input_haslo_p=haslo2.getText().toString().trim();
+                String input_haslo2=haslo2.getText().toString().trim();
 
                 if(input_email.isEmpty()) {
                     info.setText("Podaj adres e-mail");
@@ -50,15 +50,15 @@ public class MainActivity extends AppCompatActivity {
                         return;
                 }
                 if(input_haslo.isEmpty()){
-                    info.setText("Podaj haslo");
+                    info.setText("Podaj hasło");
                     return;
                 }
                 if(input_haslo_p.isEmpty()){
-                    info.setText("Powtorz hasŁo");
+                    info.setText("Powtorz hasło");
                     return;
                 }
                 if(!input_haslo_p.equals(input_haslo)){
-                    info.setText("Hasla muszą byc takie same");
+                    info.setText("Hasła muszą byc takie same");
                     return;
                 }
                 if(!input_email.isEmpty() && !input_haslo.isEmpty() && !input_haslo_p.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(input_email).matches() && input_haslo_p.equals(input_haslo)){
